@@ -12,7 +12,7 @@
     - [Infrastructure as Code](#infrastructure-as-code)
   - [2. Versione cloud: deployment su AWS](#2-versione-cloud-deployment-su-aws)
     - [Cloudificazione dell'architettura](#cloudificazione-dellarchitettura)
-    - [Esempi di componenti AWS aggiuntivi](#esempi-di-componenti-aws-aggiuntivi)
+    - [Opzionale: integrazione di componenti AWS aggiuntivi](#opzionale-integrazione-di-componenti-aws-aggiuntivi)
     - [Alternative architetturali](#alternative-architetturali)
     - [Infrastructure as Code e CI/CD](#infrastructure-as-code-e-cicd)
 
@@ -68,7 +68,7 @@
   - **DynamoDB** per database NoSQL;
   - **ElastiCache** per Redis.
 
-### Esempi di componenti AWS aggiuntivi
+### Opzionale: integrazione di componenti AWS aggiuntivi
 
 - **SQS**: coda messaggi serverless e cloud-native AWS; non ha un componente locale, ma una scelta alternativa quando si vuole delegare completamente ad AWS la gestione delle code.
 - **Amazon MQ for RabbitMQ**: alternativa gestita AWS se si vuole usare RabbitMQ nel cloud senza gestire manualmente il broker.
@@ -82,9 +82,9 @@
   
   Questo potrebbe essere un progetto a sé stante su repo GH.
 
-- Sostituzione del cluster Kubernetes cloud con un cluster di istanze EC2 in **Auto Scaling**.
+- Sostituzione del cluster Kubernetes cloud con un cluster di istanze EC2 in **Auto Scaling** controllate da un **Load Balancer** classico o application-level.
 
-Questo potrebbe essere un altro progetto a sé stante su repo GH.
+  Questo potrebbe essere un altro progetto a sé stante su repo GH.
 
 
 ### Infrastructure as Code e CI/CD
